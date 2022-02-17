@@ -7,9 +7,12 @@ from replit import db
 import time
 import os
 
+# Global Variables
+first_run = True
+
 
 # Again Function
-def again():
+def again(local_first_run1):
     again = input("Would you like to run more commands? (y or n)")
     if again == "y":
         print("Okay!")
@@ -40,7 +43,10 @@ def again():
 
 
 # Manager Function
-def manager():
+def manager(local_first_run = False):
+    if local_first_run == True:
+        os.system('clear')
+        local_first_run = False
     command = input("Please enter command:\n")
     if command == "Set" or command == "Add":
         new_key = input("Please enter key!\n")
@@ -86,4 +92,4 @@ def manager():
     again()
 
 
-manager()
+manager(first_run)
