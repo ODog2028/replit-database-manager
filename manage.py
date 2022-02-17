@@ -10,7 +10,6 @@ import os
 # Global Variables
 first_run = True
 
-
 # Again Function
 def again(local_first_run1):
     again = input("Would you like to run more commands? (y or n)")
@@ -40,7 +39,6 @@ def again(local_first_run1):
             print("Sorry, I didn't get that!")
             time.sleep(1)
             print("Bye!")
-
 
 # Manager Function
 def manager(local_first_run = False):
@@ -90,6 +88,5 @@ def manager(local_first_run = False):
     else:
         print("That is not a command. Please try again")
     again()
-
 
 manager(first_run)
